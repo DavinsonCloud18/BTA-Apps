@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="rmi-database-server.jnlp">
+  <information>
+    <title>rmi-database-server</title>
+    <vendor>STU</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib\mysql-connector-java-8.0.18.jar" size="2330539" download="eager" />
+    <jar href="lib\rmi-database-api.jar" size="21834" download="eager" />
+    <jar href="rmi-database-server.jar" size="12818" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="rmi-database-server" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="com.rmi.server.Main"  name="rmi-database-server" />
+  <update check="always"/>
+</jnlp>

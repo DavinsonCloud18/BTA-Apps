@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="487.0" prefWidth="607.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rmi.client.MainPageController">
+   <children>
+      <TabPane layoutX="-1.0" layoutY="-1.0" prefHeight="490.0" prefWidth="641.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab fx:id="tab_login" text="Login ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="89.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selamat Datang di BTA Application">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="174.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="silahkan login untuk mulai menggunakan aplikasi" />
+                        <GridPane layoutX="79.0" layoutY="170.0" prefHeight="61.0" prefWidth="450.0">
+                           <columnConstraints>
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="220.0" minWidth="10.0" prefWidth="86.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="398.0" minWidth="10.0" prefWidth="364.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="NIM" />
+                              <Label text="Password" GridPane.rowIndex="1" />
+                              <TextField fx:id="txt_login_nim" GridPane.columnIndex="1" />
+                              <PasswordField fx:id="txt_login_password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                        <Button fx:id="btn_login" layoutX="441.0" layoutY="243.0" mnemonicParsing="false" onAction="#loginValidation" prefHeight="25.0" prefWidth="88.0" text="Login" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tab_register_user" text="Register">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="117.0" layoutY="113.0" prefWidth="377.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.0" minWidth="10.0" prefWidth="115.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="303.0" minWidth="10.0" prefWidth="262.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="NIM" />
+                              <Label text="Nama" GridPane.rowIndex="1" />
+                              <Label text="Password" GridPane.rowIndex="2" />
+                              <Label text="Re-type Password" GridPane.rowIndex="3" />
+                              <Label text="Email" GridPane.rowIndex="4" />
+                              <TextField fx:id="register_nim" GridPane.columnIndex="1" />
+                              <TextField fx:id="register_nama" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="register_email" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <PasswordField fx:id="register_pass" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <PasswordField fx:id="register_repass" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                        <Text layoutX="213.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register Form">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="btn_register" layoutX="434.0" layoutY="279.0" mnemonicParsing="false" onAction="#registerUser" text="Register" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tab_pemesanan" disable="true" text="Pemesanan">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="112.0" layoutY="64.0" prefHeight="143.0" prefWidth="345.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="286.0" minWidth="0.0" prefWidth="122.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="286.0" minWidth="10.0" prefWidth="18.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="581.0" minWidth="10.0" prefWidth="142.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="581.0" minWidth="10.0" prefWidth="28.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="581.0" minWidth="10.0" prefWidth="20.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="581.0" minWidth="10.0" prefWidth="62.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="28.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Nama Barang" />
+                              <Label text="Jenis" GridPane.rowIndex="1" />
+                              <Label text="Harga" GridPane.rowIndex="2" />
+                              <Label text="Jumlah Pemesanan" GridPane.rowIndex="3" />
+                              <Label fx:id="selected_barang_nama" text="-" GridPane.columnIndex="2" />
+                              <Label fx:id="selected_barang_jenis" text="-" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Label fx:id="selected_barang_harga" text="-" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <TextField fx:id="txt_jumlah_pemesanan" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <Label text=":" GridPane.columnIndex="1" />
+                              <Label text=":" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text=":" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label text=":" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label text="Lokasi Transaksi" GridPane.rowIndex="4" />
+                              <TextField fx:id="txt_lokasi_transaksi" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                              <Label text=":" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label text="Id" GridPane.columnIndex="3" />
+                              <Label text=":" GridPane.columnIndex="4" />
+                              <Label fx:id="selected_id_barang" text="-" GridPane.columnIndex="5" />
+                           </children>
+                        </GridPane>
+                        <Text layoutX="117.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lakukan Pemesanan dengan Mengisi Form Berikut">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="244.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Barang yang anda pilih" />
+                        <Text layoutX="17.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Barang yang tersedia" />
+                        <TableView fx:id="table_barang" layoutX="17.0" layoutY="260.0" prefHeight="184.0" prefWidth="576.0">
+                          <columns>
+                            <TableColumn fx:id="col_id_barang" prefWidth="87.0" text="Id" />
+                            <TableColumn fx:id="col_nama_barang" prefWidth="200.0" text="Nama" />
+                              <TableColumn fx:id="col_jenis_barang" prefWidth="75.0" text="Jenis" />
+                              <TableColumn fx:id="col_harga_barang" prefWidth="75.0" text="Harga per 1 Barang" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <Button fx:id="btn_pemesanan" layoutX="495.0" layoutY="218.0" mnemonicParsing="false" onAction="#doPemesanan" text="Pesan Sekarang" />
+                        <Button fx:id="btn_logout" layoutX="529.0" layoutY="39.0" mnemonicParsing="false" onAction="#logout" text="Logout" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tab_history_pemesanan" disable="true" text="History Pemesanan">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="table_history_transaksi" layoutX="9.0" layoutY="150.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="623.0">
+                          <columns>
+                            <TableColumn fx:id="col_history_id_pemesanan" prefWidth="98.0" text="Id Pemesanan" />
+                              <TableColumn fx:id="col_history_id_barang" prefWidth="122.0" text="Id Barang" />
+                              <TableColumn fx:id="col_history_nim" prefWidth="76.0" text="NIM" />
+                              <TableColumn fx:id="col_history_lokasi" prefWidth="94.0" text="Lokasi" />
+                              <TableColumn fx:id="col_history_kuantitas" prefWidth="94.0" text="Kuantitas" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <GridPane layoutX="22.0" layoutY="27.0" prefHeight="76.0" prefWidth="283.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="63.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="142.0" minWidth="9.0" prefWidth="16.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.0" minWidth="10.0" prefWidth="204.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="NIM" />
+                              <Label text="Nama" GridPane.rowIndex="1" />
+                              <Label text="Email" GridPane.rowIndex="2" />
+                              <Label fx:id="lbl_nim" text="-" GridPane.columnIndex="2" />
+                              <Label fx:id="lbl_nama" text="-" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Label fx:id="lbl_email" text="-" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <Label text=":" GridPane.columnIndex="1" />
+                              <Label text=":" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text=":" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                        <Label layoutX="197.0" layoutY="115.0" text="Tabel History Transaksi Barang">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btn_history_refresh" layoutX="571.0" layoutY="115.0" mnemonicParsing="false" onAction="#RefreshHistory" text="Refresh" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tab_chat_client" disable="true" text="Chat Admin">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="txt_area_chat_client" editable="false" layoutX="14.0" layoutY="14.0" prefHeight="374.0" prefWidth="615.0" />
+                        <TextField fx:id="txt_field_chat_client" layoutX="14.0" layoutY="406.0" prefHeight="25.0" prefWidth="489.0" />
+                        <Button fx:id="btn_send_messages_client" layoutX="515.0" layoutY="406.0" mnemonicParsing="false" onAction="#sendMessages" prefHeight="25.0" prefWidth="114.0" text="Send Message" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
